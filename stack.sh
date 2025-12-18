@@ -136,7 +136,7 @@ sleep 0.3
 echo -e "\n $(tput setaf 1) $(tput bold)Installing AWS CLI...$(tput sgr0) $(tput sgr 0) \n"
 cd /tmp
 
-
+curl -L "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o awscliv2.zip
 
 echo -ne 'Progress ====>                     (33%)\r'
 sleep 0.3
@@ -158,7 +158,7 @@ cat <<'EOF' > "$ALIAS_FILE"
 alias aws="AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test aws --endpoint-url=http://localhost:4566"
 EOF
 
-chmod 644 "$ALIAS_FILE"
+sudo chmod 644 "$ALIAS_FILE"
 
 
 echo -e "\n $(tput setaf 1) $(tput bold)AWS CLI INSTALLED !!!$(tput sgr0) $(tput sgr 0) \n"
@@ -184,6 +184,7 @@ sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
 gpg --no-default-keyring \
 --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
 --fingerprint
+sudo apt update
 
 echo -ne 'Progress =============>            (66%)\r'
 sleep 0.3
