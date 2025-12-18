@@ -5,5 +5,4 @@ wget -O - https://raw.githubusercontent.com/karansuneja/scripts/master/docker-in
 
 
 wget -O - https://raw.githubusercontent.com/karansuneja/scripts/master/stack.sh | bash
-
 =====================================
