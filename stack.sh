@@ -301,7 +301,30 @@ echo -ne '\n'
 
 echo -e "\n $(tput setaf 1) $(tput bold)KUBECTL  INSTALLED !!!$(tput sgr0) $(tput sgr 0) \n"
 
+
+
+# install helm
+echo -e "\n $(tput setaf 1) $(tput bold)Installing helm...$(tput sgr0) $(tput sgr 0) \n"
+echo -ne 'Progress ====>                     (33%)\r'
+sleep 0.3
+
+
+curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+echo -ne 'Progress =============>            (66%)\r'
+sleep 0.3
+
+
+
+echo -ne "Progress ========================> (100%)\r"
+echo -ne '\n'
+
+echo -e "\n $(tput setaf 1) $(tput bold)HELM  INSTALLED !!!$(tput sgr0) $(tput sgr 0) \n"
+
 echo -ne '\n'
 echo -ne '\n'
 echo -ne '\n'
 echo -e "\n $(tput setaf 1) $(tput bold)STACK IS INSTALLED AND READY TO USE !!!$(tput sgr0) $(tput sgr 0) \n"
+
+
+
