@@ -90,7 +90,7 @@ echo -e "\n $(tput setaf 1) $(tput bold)Setting up LocalStack...$(tput sgr0) $(t
 sudo chown -R $(whoami):$(whoami) /opt
 cd /opt
 mkdir localstack && cd localstack
-Docker pull localstack/localstack:latest
+docker pull localstack/localstack:latest
 
 echo -ne 'Progress ====>                     (33%)\r'
 sleep 0.3
@@ -165,6 +165,7 @@ echo -e "\n $(tput setaf 1) $(tput bold)AWS CLI INSTALLED !!!$(tput sgr0) $(tput
 
 
 ## install terraform
+
 sleep 0.3
 cd /tmp
 
